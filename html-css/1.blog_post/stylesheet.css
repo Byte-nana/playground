@@ -1,0 +1,120 @@
+/* Linking google font */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  gap: clamp(10px, 4vw, 40px);
+  margin: 2rem;
+  container-type: inline-size;
+  container-name: post;
+}
+
+.textBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+
+.logoBox {
+  width: fit-content;
+  display: grid;
+  grid-template-areas:
+    'logoImg userName'
+    'logoImg postHr';
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 10px;
+}
+
+.logo__img {
+  grid-area: logoImg;
+  width: 30px;
+  height: 30px;
+  justify-self: center;
+  align-self: center;
+}
+
+.logo__userName {
+  grid-area: userName;
+  font-size: 1rem;
+}
+
+.logo__postHr {
+  grid-area: postHr;
+  font-size: 0.8rem;
+}
+
+.post__title {
+  font-size: 1.125rem;
+  margin: 8px 0;
+}
+
+.post__content {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.post__shareBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1rem;
+}
+
+.imgBox {
+  flex: 1;
+}
+
+.post__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.divder {
+  max-width: 1200px;
+  height: 1px;
+  background: #eee;
+  margin: 32px;
+}
+
+@container post (width > 900px) {
+  .post__title {
+    font-size: 1.5rem;
+    margin: 16px 0;
+  }
+  .post__content {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    margin: 2rem auto;
+  }
+  .divder {
+    margin: 32px auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
