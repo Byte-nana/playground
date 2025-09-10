@@ -1,0 +1,74 @@
+/* Linking google font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+body {
+  background-color: #efebe0;
+}
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 2rem 0 1rem 0;
+}
+
+.alert {
+  position: relative;
+  width: 80%;
+  padding: 1rem;
+  background: #fb4570;
+  border-radius: 4px;
+}
+.alert:nth-child(1) {
+  display: none;
+}
+.alert:nth-child(2) {
+  background: #fb6b90;
+}
+.alert:nth-child(3) {
+  background: #fb8da0;
+}
+.alert__content {
+  margin-right: 8px;
+  font-size: 1.125rem;
+  color: #efebe0;
+}
+.content-accent {
+  font-weight: 700;
+}
+.alert__btn {
+  width: 28px;
+  height: 28px;
+  font-size: 1.125rem;
+  color: #efebe0;
+  border: transparent;
+}
+.alert__btn:hover {
+  border: 2px solid #efebe0;
+  border-radius: 50%;
+}
+.show-btn {
+  width: 52px;
+  height: 52px;
+  display: block;
+  margin: auto;
+  font-size: 1.5rem;
+  color: #233750;
+}
+.show-btn:hover {
+  color: #fb6b90;
+  border: 2px solid #fb6b90;
+  border-radius: 50%;
+}
