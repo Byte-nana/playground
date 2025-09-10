@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking CSS -->
+    <link rel="stylesheet" href="./stylesheet.css" />
+    <title>Shopping cart</title>
+  </head>
+  <body>
+    <section class="cart">
+      <h1 class="cart__title">Your shopping cart</h1>
+      <table class="cart__table">
+        <thead>
+          <tr>
+            <th scope="col" colspan="2">ITEM</th>
+            <th scope="col">AMOUNT</th>
+            <th scope="col">PRICE</th>
+            <th scope="col">TOTAL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><img src="./img/camera1.jpg" alt="camera" class="img" /></th>
+            <th>
+              <p>SONY</p>
+              <p>FE 70-200 mm F2.8 GM OSS</p>
+            </th>
+            <td>1</td>
+            <td>€1979.00</td>
+            <td>€1979.00</td>
+          </tr>
+          <tr>
+            <th><img src="./img/camera2.png" alt="camera" class="img" /></th>
+            <th>
+              <p>SONY</p>
+              <p>Sonnar T E 24mm F1.8ZA</p>
+            </th>
+            <td>1</td>
+            <td>€1979.00</td>
+            <td>€1979.00</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>€2968.00</td>
+          </tr>
+        </tfoot>
+      </table>
+      <footer class="cart__footer">
+        <a href="#" class="footer__link">Edit your shopping cart</a>
+        <button class="footer__btn">Choose payment method</button>
+      </footer>
+    </section>
+  </body>
+</html>
