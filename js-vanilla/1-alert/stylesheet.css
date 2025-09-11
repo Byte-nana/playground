@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
 }
 body {
@@ -23,10 +24,16 @@ button {
   gap: 10px;
   margin: 2rem 0 1rem 0;
 }
-
 .alert {
-  position: relative;
   width: 80%;
+  max-width: 650px;
+}
+.alert__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
   padding: 1rem;
   background: #fb4570;
   border-radius: 4px;
@@ -34,14 +41,13 @@ button {
 .alert:nth-child(1) {
   display: none;
 }
-.alert:nth-child(2) {
+.alert:nth-child(2) .alert__wrapper {
   background: #fb6b90;
 }
-.alert:nth-child(3) {
+.alert:nth-child(3) .alert__wrapper {
   background: #fb8da0;
 }
 .alert__content {
-  margin-right: 8px;
   font-size: 1.125rem;
   color: #efebe0;
 }
