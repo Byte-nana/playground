@@ -1,0 +1,60 @@
+/* Linking google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quantico', sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.alert {
+  position: relative;
+  width: 50%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.id__alert {
+  display: none;
+  background-color: #bae5c0;
+}
+.pw__alert {
+  display: none;
+  background-color: #e3c7e0;
+}
+.alert__message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #272f40;
+}
+.close__btn {
+  position: absolute;
+  right: 1rem;
+  font-size: 1.5rem;
+}
+.btn__wrapper {
+  display: flex;
+  gap: 20px;
+}
+.btn {
+  background-color: #e7f6b0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #272f40;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+}
