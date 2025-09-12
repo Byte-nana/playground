@@ -22,19 +22,12 @@ button {
   margin-top: 2rem;
 }
 .alert {
+  display: none;
   position: relative;
   width: 50%;
   border-radius: 4px;
   margin-bottom: 1rem;
   padding: 1rem;
-}
-.id__alert {
-  display: none;
-  background-color: #bae5c0;
-}
-.pw__alert {
-  display: none;
-  background-color: #e3c7e0;
 }
 .alert__message {
   font-size: 1.5rem;
