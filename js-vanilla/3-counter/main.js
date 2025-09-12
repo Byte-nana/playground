@@ -1,36 +1,53 @@
-//버튼을 누르면
-//카운트 넘버가 증가하고
-// 그 증가한 숫자가 배너의 총 카운트에 반영된다. (total count가 발생하는 모든 곳을 업데이트 해줘야 한다. )
-const addBtn = document.querySelectorAll('.counter__add-btn');
-const counterNum = document.querySelectorAll('.counter__num');
+// create els
+const container = document.querySelector('.container');
+
+function createEls() {
+  const div = document.createElement('div');
+  div.setAttribute('class', 'counter');
+  div.innerHTML = `
+    <div class="num__wrapper">
+      <span class="counter__count"></span>
+      <span class="counter__total"></span>
+    </div>
+
+    <button class="counter__add-btn">Add +</button>
+  `;
+
+  container.appendChild(div);
+}
+createEls();
+createEls();
+
+//
 const totalNum = document.querySelector('.total-num');
 const emoji = document.querySelector('.emoji');
 
-let count1 = 0;
-let count2 = 0;
-counterNum[0].innerHTML = `${count1}`;
-counterNum[1].innerHTML = `${count2}`;
+// initialise count number
+const counters = Array.from(document.querySelectorAll('.counter')).map(() => 0);
 
-addBtn[0].addEventListener('click', () => {
-  count1++;
-  counterNum[0].innerHTML = `${count1} / ${count1 + count2}`;
-  totalNum.innerHTML = `${count1 + count2}`;
+function render() {
+  const showCount = document.querySelectorAll('.counter__count');
+  const totlaCount = document.querySelectorAll('.counter__total');
 
-  counterNum[1].innerHTML = `${count2} / ${count1 + count2}`;
+  const total = counters.reduce((acc, c) => acc + c, 0);
 
-  if (count1 > 10) {
-    emoji.innerHTML = '🔥';
-  }
+  showCount.forEach((el, i) => (el.textContent = `${counters[i]}`));
+
+  totlaCount.forEach((el) => (el.textContent = `/ ${total}`));
+
+  totalNum.textContent = `${total}`;
+  emoji.textContent = total > 10 ? '🔥' : '❄️';
+}
+
+// counter update
+function updateCounter(i) {
+  counters[i] += 1;
+  render();
+}
+
+const addBtn = document.querySelectorAll('.counter__add-btn');
+addBtn.forEach((btn, i) => {
+  btn.addEventListener('click', () => updateCounter(i));
 });
 
-addBtn[1].addEventListener('click', () => {
-  count2++;
-  counterNum[1].innerHTML = `${count2} / ${count1 + count2}`;
-  totalNum.innerHTML = `${count1 + count2}`;
-
-  counterNum[0].innerHTML = `${count1} / ${count1 + count2}`;
-
-  if (count2 > 10) {
-    emoji.innerHTML = '🔥';
-  }
-});
+render();

@@ -32,8 +32,11 @@
   border: 2px solid #fa26a0;
   border-radius: 20px;
 }
-.counter__num {
+.counter__count {
   font-size: 7rem;
+}
+.counter__total {
+  font-size: 1.5rem;
 }
 .counter__add-btn {
   border: none;
