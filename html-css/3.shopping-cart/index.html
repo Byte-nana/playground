@@ -11,6 +11,14 @@
     <section class="cart">
       <h1 class="cart__title">Your shopping cart</h1>
       <table class="cart__table">
+        <!-- col width -->
+        <colgroup>
+          <col style="width: 20%" />
+          <col style="width: 40%" />
+          <col style="width: 10%" />
+          <col style="width: 15%" />
+          <col style="width: 15%" />
+        </colgroup>
         <thead>
           <tr>
             <th scope="col" colspan="2">ITEM</th>
@@ -21,21 +29,25 @@
         </thead>
         <tbody>
           <tr>
-            <th><img src="./img/camera1.jpg" alt="camera" class="img" /></th>
-            <th>
+            <td>
+              <img src="./img/camera1-removebg.png" alt="camera" class="img" />
+            </td>
+            <td>
               <p>SONY</p>
               <p>FE 70-200 mm F2.8 GM OSS</p>
-            </th>
+            </td>
             <td>1</td>
             <td>€1979.00</td>
             <td>€1979.00</td>
           </tr>
           <tr>
-            <th><img src="./img/camera2.png" alt="camera" class="img" /></th>
-            <th>
+            <td>
+              <img src="./img/camera2-removebg.png" alt="camera" class="img" />
+            </td>
+            <td>
               <p>SONY</p>
               <p>Sonnar T E 24mm F1.8ZA</p>
-            </th>
+            </td>
             <td>1</td>
             <td>€1979.00</td>
             <td>€1979.00</td>
@@ -43,10 +55,11 @@
         </tbody>
         <tfoot>
           <tr>
-            <td>€2968.00</td>
+            <td colspan="5">€2968.00</td>
           </tr>
         </tfoot>
       </table>
+
       <footer class="cart__footer">
         <a href="#" class="footer__link">Edit your shopping cart</a>
         <button class="footer__btn">Choose payment method</button>
