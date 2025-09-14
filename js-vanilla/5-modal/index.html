@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/a5f079a000.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS-->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- JS -->
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <button class="show-modal">SIGN IN</button>
+
+    <section class="login-modal">
+      <form action="#" class="modal__form">
+        <button class="form__close-btn" type="button">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </button>
+        <h4 class="form__title">Hello there, Byte-Nana</h4>
+        <p class="form__content">Welcome back! Please enter your details.</p>
+
+        <label for="email" class="form__label">
+          <i class="fa-solid fa-envelope"></i>
+          Email
+        </label>
+        <input type="email" id="email" class="form__input input-email" />
+        <label for="password" class="form__label">
+          <i class="fa-solid fa-lock"></i>
+          Password
+          <i class="fa-solid fa-eye-slash"></i>
+        </label>
+        <input type="password" id="password" class="form__input input-pw" />
+
+        <p class="form__forgot-message">Forgot password?</p>
+
+        <button class="form__signin-btn" type="submit">Get Started</button>
+
+        <span class="form__line"></span>
+        <p class="form__login-ways">Or sign in with</p>
+        <span class="form__line"></span>
+
+        <div class="emails">
+          <button class="emails__google">
+            <img
+              src="./img/Google-logo.svg"
+              alt="Google logo"
+              class="google-logo"
+            />
+          </button>
+          <button class="emails__facebook">
+            <img
+              src="./img/Facebook-logo.png"
+              alt="Facebook logo"
+              class="Facebook-logo"
+            />
+          </button>
+          <button class="emails__apple">
+            <img
+              src="./img/Apple-logo.svg"
+              alt="Apple logo"
+              class="apple-logo"
+            />
+          </button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
