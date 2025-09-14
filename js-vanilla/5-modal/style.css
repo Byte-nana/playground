@@ -1,13 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-:root {
-  --color-sky: #87ceeb;
-  --color-pink: #f4c2c2;
-  --color-peach: #ffdab9;
-  --color-lavender: #c0c0d9;
-  --color-cream: #fff5ee;
-  --color-accent: #4682b4;
-  --color-text: #040a18;
-}
 
 * {
   margin: 0;
@@ -23,7 +14,7 @@ body {
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  color: var(--color-text);
+  color: #040a18;
 }
 body::before {
   content: '';
@@ -42,58 +33,169 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
-img {
-  width: 48px;
+
+/*  */
+.show-modal {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(2px) saturate(180%);
+  -webkit-backdrop-filter: blur(2px) saturate(180%);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
 }
+/*  */
 .login-modal {
+  /* display: none; */
   width: 50%;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(2px) saturate(180%);
   -webkit-backdrop-filter: blur(2px) saturate(180%);
-
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  /* box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25); */
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
   border-radius: 20px;
 }
 .modal__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   padding: 2rem 2.5rem;
+  text-align: center;
 }
 .form__close-btn {
-  width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 58px;
   font-size: 2rem;
+  padding-left: 0.3rem;
   margin: 0 auto 1rem;
+  border: 2px solid transparent;
+}
+.form__close-btn:hover {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .form__title {
   font-size: 1.5rem;
-  text-align: center;
 }
 .form__content {
   font-size: 1.125rem;
   margin: 0.5rem 0 1.5rem 0;
 }
-.form__input {
+.input-field {
+  position: relative;
+  margin: 1rem 0;
+  border-bottom: 2px solid #fff;
+}
+.input-field input {
   width: 100%;
-  height: 32px;
-
+  height: 40px;
   padding: 2px 8px;
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-
+  background-color: transparent;
   outline: none;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-
+  border: none;
   font-size: 1.125rem;
 }
-.form__label {
-  /* position: relative; */
-  /* top: 10px; */
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin-left: 8px;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 300ms ease;
+}
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  transform: translateY(-120%);
   font-size: 0.875rem;
-  z-index: 2;
+  top: 10px;
+}
+.pw-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  font-size: 0.875rem;
+}
+.pw-options label {
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+}
+#remember {
+  accent-color: #fff;
+}
+.forgot-message {
+  color: #040a18;
+  text-decoration: none;
+}
+.forgot-message:hover {
+  text-decoration: underline;
+}
+.form__signin-btn {
+  background-color: #040a18;
+  margin: 1rem 0;
+  padding: 0.8rem 0;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: all 300ms ease;
+
+  box-shadow: 10px 10px 11px -2px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: 10px 10px 11px -2px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: 10px 10px 11px -2px rgba(0, 0, 0, 0.53);
+}
+.form__signin-btn:hover {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #040a18;
+  font-weight: 600;
+}
+.sign-options {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.form__line {
+  width: 33%;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+}
+.sign-options p {
+  font-size: 1rem;
+}
+.emails {
+  display: flex;
+  gap: 16px;
+  margin-top: 1rem;
+}
+
+.emails button {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  box-shadow: 10px 10px 11px -2px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: 10px 10px 11px -2px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: 10px 10px 11px -2px rgba(0, 0, 0, 0.53);
+  transition: all 300ms ease;
+}
+.emails button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+.emails img {
+  width: 24px;
 }
