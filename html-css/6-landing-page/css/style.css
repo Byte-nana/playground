@@ -159,6 +159,8 @@ img {
   font-size: 1.125rem;
 }
 .portfolio__list {
+  container-type: inline-size;
+  container-name: portfolio-item;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -186,7 +188,6 @@ img {
   background-color: rgba(0, 0, 0, 0.3);
   color: var(--text-colour-light);
   z-index: 5;
-  border: 1.5rem solid transparent;
   transition: all 300ms ease;
 }
 .overlay:hover {
@@ -232,4 +233,89 @@ img {
   margin-top: 24px;
   color: var(--text-colour-dark);
   text-align: center;
+}
+/* container query */
+@container portfolio-item (width > 600px) {
+  .portfolio__item {
+    width: 80%;
+  }
+  .overlay__title {
+    font-size: 1.5rem;
+  }
+  .overlay__content {
+    font-size: 1.125rem;
+  }
+  .overlay:hover {
+    border: 1.5rem solid var(--text-colour-light);
+  }
+}
+/* media query */
+@media screen and (min-width: 1024px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem;
+    padding-bottom: 0;
+
+    text-align: left;
+  }
+  .header__title {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+  .header__content {
+    font-size: 1.125rem;
+  }
+  .header__btn {
+    margin: 16px 0 0 0;
+  }
+  .header__img {
+    width: 35%;
+  }
+  .caption__title {
+    font-size: 1.5rem;
+  }
+  .caption__content {
+    font-size: 1.125rem;
+    margin: 24px 0;
+  }
+  .service__sub-title {
+    font-size: 1rem;
+  }
+  .service__title {
+    font-size: 1.5rem;
+  }
+  .service__lists {
+    margin: 48px 0 32px 0;
+  }
+  .service__item {
+    width: 20%;
+  }
+  .service__item > i {
+    width: 64px;
+    height: 64px;
+    padding: 1rem 0;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--colour-primary);
+    background-color: var(--text-colour-light);
+  }
+  .item__box {
+    margin-top: 18px;
+    font-size: 1.125rem;
+  }
+  .portfolio {
+    padding: 2rem 4rem;
+  }
+  .portfolio__sub-title {
+    font-size: 1rem;
+  }
+  .portfolio__title {
+    font-size: 1.5rem;
+  }
+  .portfolio__item {
+    position: relative;
+    width: 48%;
+  }
 }
