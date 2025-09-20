@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
+    <title>Dark Toggle</title>
+    <meta name="description" content="making light/dark mode toggling button" />
+    <meta name="author" content="Byte-nana" />
+    <meta name="keywords" content="HTML, CSS, JS" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a5f079a000.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Javascript -->
+    <script src="./src/main.js" defer></script>
+  </head>
+  <body>
+    <section class="container">
+      <header class="header">
+        <span>21:42</span>
+        <div>
+          <i class="fa-solid fa-tower-cell"></i>
+          <i class="fa-solid fa-wifi"></i>
+          <i class="fa-solid fa-battery-full"></i>
+        </div>
+      </header>
+      <main class="main">
+        <div class="sun">
+          <div class="sun-glow-left-under sun-glow"></div>
+          <div class="sun-glow-left sun-glow"></div>
+          <div class="sun-glow-middle sun-glow"></div>
+          <div class="sun-glow-right sun-glow"></div>
+          <div class="sun-glow-right-under sun-glow"></div>
+          <div class="sun-body"></div>
+        </div>
+
+        <div class="text">
+          <h2 class="text__title">Pick Your Vibe</h2>
+          <p class="text__des">Bright mornings or cozy nights. Make it yours</p>
+        </div>
+
+        <label for="checkbox" class="switch">
+          <input type="checkbox" id="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </main>
+
+      <footer class="footer">
+        <a href="#" class="footer__skip">Skip</a>
+        <button class="footer__btn">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </footer>
+    </section>
+  </body>
+</html>
