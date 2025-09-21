@@ -7,8 +7,11 @@ The goal of this project is to practice clean HTML/CSS structure, responsive des
 
 ### Screenshot
 
+#### Mobile
 ![Mobile screenshot](./mobile.png)
+#### Tablet
 ![Tablet screenshot](./tablet.png)
+#### Desktop
 ![Desktop screenshot](./desktop.png)
 
 ## My Progress
