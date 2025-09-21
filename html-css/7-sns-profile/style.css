@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-  --colour-bg: #f7f9fc;
+  --colour-bg-primary: #eee;
+  --colour-bg-accent: #f7f9fc;
   --colour-accent: #6fbaf8;
 
-  --colour-text: black;
+  --colour-border: gainsboro;
 }
 
 * {
@@ -13,42 +14,47 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
-
 body {
   padding: 2rem;
-  background-color: #eee;
+  background-color: var(--colour-bg-primary);
   font-size: 1rem;
 }
 h3 {
   font-size: 1.25rem;
   margin-bottom: 16px;
 }
-
 ul {
   list-style: none;
   line-height: 2;
 }
-
 button {
   border: none;
   outline: none;
   background: transparent;
   cursor: pointer;
 }
+
+/* Common */
 .section-box {
   width: 100%;
   padding: 1rem;
   border-radius: 8px;
-  background-color: var(--colour-bg);
+  background-color: var(--colour-bg-accent);
 }
 .btn {
   padding: 0.5rem 1rem;
+  border: 2px solid transparent;
   border-radius: 8px;
   background-color: var(--colour-accent);
   font-size: 1rem;
-  color: var(--colour-bg);
+  color: var(--colour-bg-accent);
 }
-/*  */
+.btn:active {
+  border: 2px solid var(--colour-accent);
+  color: var(--colour-accent);
+  background-color: var(--colour-bg-accent);
+}
+/* Header */
 .info__img {
   display: block;
   width: 60%;
@@ -59,7 +65,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  line-height: 1.5;
 }
 .info__name {
   font-size: 1.5rem;
@@ -68,6 +74,7 @@ button {
   color: var(--colour-accent);
 }
 .info__btn {
+  margin-top: 8px;
   width: fit-content;
 }
 .header__details {
@@ -80,6 +87,7 @@ button {
   font-weight: 600;
 }
 .divider__title {
+  position: relative;
   width: fit-content;
   margin-top: 32px;
   padding: 0 1rem 4px;
@@ -91,21 +99,28 @@ button {
 .header__divider {
   width: 100%;
   height: 2px;
-  background-color: var(--colour-bg);
+  background-color: var(--colour-border);
   z-index: -10;
 }
+
+/* Work */
 .work {
   margin: 32px 0 8px;
 }
+/* About*/
 .about__content {
   line-height: 1.5;
+}
+.about {
+  position: relative;
 }
 .divider {
   width: 100%;
   height: 2px;
   margin: 32px 0;
-  background-color: #eee;
+  background-color: var(--colour-border);
 }
+/* Skills */
 .skills__list {
   display: flex;
   flex-wrap: wrap;
@@ -114,9 +129,10 @@ button {
 .skills__item {
   width: fit-content;
   padding: 0 1rem;
-  border: 1px solid gainsboro;
+  border: 1px solid var(--colour-border);
   border-radius: 20px;
 }
+/* Contact */
 .contact {
   margin: 8px 0;
   text-align: center;
@@ -137,9 +153,148 @@ button {
 .contact__link:active {
   text-decoration: underline;
 }
+/* Connect */
+.connect__title {
+  width: fit-content;
+  margin: 0 auto 16px;
+  padding: 0 16px 8px;
+  border-bottom: 2px solid var(--colour-border);
+}
+.connect__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+.connect__img {
+  width: 30%;
+  height: 30%;
+}
+.connect__wrapper {
+  line-height: 1.5;
+}
+.connect__name {
+  font-size: 1rem;
+}
+.connect__location {
+  color: var(--colour-accent);
+}
+
 /* hover */
 @media (hover: hover) {
+  .btn:hover {
+    border: 2px solid var(--colour-accent);
+    color: var(--colour-accent);
+    background-color: var(--colour-bg-accent);
+  }
   .contact__link:hover {
     text-decoration: underline;
+  }
+}
+
+/* media query */
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.125rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .section-box {
+    width: 100%;
+    padding: 2rem;
+  }
+  .btn {
+    font-size: 1.125rem;
+  }
+  .header__info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+  }
+  .info__img {
+    width: 30%;
+    height: 30%;
+    margin: 0;
+  }
+  .info__name {
+    font-size: 1.75rem;
+  }
+  .header__details {
+    justify-content: space-evenly;
+    padding: 0;
+  }
+  .layout {
+    display: flex;
+    gap: 16px;
+  }
+  .connect {
+    margin: 8px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__info {
+    width: 40%;
+    gap: 0;
+  }
+  .info__img {
+    width: 50%;
+    height: 50%;
+  }
+  .header__details {
+    margin: 0;
+    gap: 4rem;
+    padding: 1rem 2rem;
+    border-left: 2px solid var(--colour-border);
+  }
+  .main {
+    display: flex;
+    margin-top: 32px;
+    gap: 16px;
+  }
+  .work {
+    width: 20%;
+    height: fit-content;
+    margin: 0;
+  }
+  .wrapper {
+    width: 60%;
+    height: fit-content;
+    padding-bottom: 14rem;
+  }
+  .layout {
+    width: 20%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .contact {
+    margin: 0;
+    padding: 1rem;
+  }
+  .connect {
+    margin: 0;
+    padding: 1rem;
+    background-color: transparent;
+    font-size: 0.875rem;
+  }
+  .connect__title {
+    width: 100%;
+    margin: 0 0 16px;
+    padding: 0 8px 8px;
+    font-size: 0.875rem;
+  }
+  .connect__box {
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  .connect__name {
+    font-size: 0.875rem;
   }
 }
