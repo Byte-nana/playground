@@ -7,9 +7,9 @@ The goal of this project is to practice clean HTML/CSS structure, responsive des
 
 ### Screenshot
 
-![Mobile](./mobile.png)  
-![Tablet](./tablet.png)  
-![Desktop](./desktop.png)
+![Mobile screenshot] (./mobile.png)  
+![Tablet screenshot] (./tablet.png)  
+![Desktop screenshot] (./desktop.png)
 
 ## My Progress
 
