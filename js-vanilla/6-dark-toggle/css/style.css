@@ -1,24 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 :root {
-  /* Dark mode */
+  /* Dark mode - default*/
   --color-bg: var(--color-deep-purple);
-  --color-primary: var(--color-light-blue);
   --color-accent: var(--color-aqua);
-  --color-text-light: var(--color-white);
+  --color-text: var(--color-light-blue);
 
   --color-deep-purple: #1d122b;
   --color-aqua: #8ae9ff;
   --color-light-blue: #d6e4ff;
-
   --color-yellow: #ffd45a;
   --color-orange: #ff9e3d;
-  --color-white: #f4f4f6;
-
-  /* --color-indigo: #26214a; */
-  /* --color-night-purple: #3a2675; */
 }
+:root[data-theme='light'] {
+  --color-bg: var(--color-light-blue);
+  --color-text: var(--color-deep-purple);
+  --color-accent: var(--color-yellow);
 
+  --color-deep-purple: #1d122b;
+  --color-aqua: #8ae9ff;
+  --color-light-blue: #d6e4ff;
+  --color-yellow: #ffd45a;
+  --color-orange: #ff9e3d;
+}
 * {
   margin: 0;
   padding: 0;
@@ -40,7 +44,7 @@ body {
   justify-content: space-between;
   border-radius: 32px;
   background-color: var(--color-bg);
-  color: var(--color-text-light);
+  color: var(--color-text);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
 .header {
@@ -164,7 +168,6 @@ body {
 #checkbox:checked + .slider:after {
   transform: translateX(-100px);
 }
-
 .slider__text {
   position: absolute;
   font-weight: bold;
@@ -173,7 +176,7 @@ body {
   top: 0;
   left: 0;
   transform: translate(30%, 50%);
-  color: var(--color-text-light);
+  color: var(--color-text);
 }
 .slider__text:last-child {
   right: 0;
@@ -190,7 +193,7 @@ body {
 .footer__skip {
   text-decoration: none;
   font-size: 1.2rem;
-  color: var(--color-text-light);
+  color: var(--color-text);
 }
 .footer__skip:hover {
   color: var(--color-accent);
@@ -200,11 +203,11 @@ body {
   height: 48px;
   border: 2px solid transparent;
   outline: none;
-  background-color: var(--color-deep-purple);
+  background-color: var(--color-bg);
   filter: brightness(150%);
   border-radius: 50%;
   font-size: 1.8rem;
-  color: var(--color-text-light);
+  color: var(--color-text);
   line-height: 48px;
   cursor: pointer;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
